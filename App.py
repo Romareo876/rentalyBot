@@ -97,10 +97,10 @@ def results(phone):
         decision = str(result.get('parameters').get('confirmation'))
 
     if intent == 'Update Vacancy - Steps Confirmation':
-        propertyCode = str(result.get('outputContexts')[0].get('parameters').get('propertyCode'))  
-        roomNum = int(result.get('outputContexts')[0].get('parameters').get('roomNumber'))   
+        propertyCode = str(result.get('outputContexts')[1].get('parameters').get('propertyCode'))  
+        roomNum = int(result.get('outputContexts')[1].get('parameters').get('roomNumber'))   
         roomNum = str(roomNum)         
-        status = str(result.get('outputContexts')[0].get('parameters').get('roomStatus')) 
+        status = str(result.get('outputContexts')[1].get('parameters').get('roomStatus')) 
         decision = str(result.get('parameters').get('confirmation'))
      
     # generate appropriate response

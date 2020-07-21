@@ -72,7 +72,7 @@ def results(phone):
         status = str(result.get('parameters').get('roomStatus'))    
         roomNum  = int(result.get('outputContexts')[1].get('parameters').get('roomNumber'))
         roomNum = str(roomNum)
-        propertyCode= str(result.get('outputContexts')[1].get('parameters').get('propertyCode'))
+        propertyCode= str(result.get('outputContexts')[2].get('parameters').get('propertyCode'))
    
 
     if intent == 'Update Rent - Confirmation':

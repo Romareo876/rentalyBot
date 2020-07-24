@@ -74,19 +74,19 @@ def generateResponse(intent, newPrice, propertyCode, roomID, phoneNum, status, d
       return 'What is the new rent?'
 
     elif intent == "Update Rent - getRoomCost": 
-      return 'Are you sure you want update the rent of Property '+propertyCode.upper()+' - Room '+roomID+' to $'+newPrice+'?'
+      return 'Are you sure you want update the rent of Property '+propertyCode.upper()+' - Room '+roomID+' to $'+newPrice+'0?'
 
     elif intent == "Update Rent - Confirmation" or intent == "Update Rent - Steps Confirmation":  
         if decision == 'yes':   
           updatePrice(newPrice, propertyCode, roomID)
-          return "Rent was successfully updated"
+          return 'Room '+ roomID+ ' rent was successfully updated to $'+newPrice+'0'
         else:
             return "Ok, how else can I assist?"
 
     elif intent == "Update Vacancy - Confirmation" or intent == "Update Vacancy - Steps Confirmation":
         if decision == 'yes': 
           updateOccupancy(propertyCode, status, roomID)
-          return 'Room vacancy status successfully updated'
+          return 'Room '+ roomID+ ' vacancy status successfully updated to '+status
         else:
             return "Ok, how else can I assist?"
       
